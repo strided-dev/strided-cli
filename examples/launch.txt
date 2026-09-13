@@ -1,0 +1,1 @@
+python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3-8B --block-size 16 --max-num-seqs 256 --gpu-memory-utilization 0.90

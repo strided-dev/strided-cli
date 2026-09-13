@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "strided"
+version = "0.1.0"
+description = "Runtime tuning for local models: observe, adjust, verify."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "click>=8.0",
+]
+
+[project.urls]
+Repository = "https://github.com/strided-dev/strided-cli"
+
+[project.scripts]
+strided = "cli.main:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cli*", "collect*", "engine*", "gait*", "parsers*", "rules*", "schema*"]
+exclude = ["tests*", "docs*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

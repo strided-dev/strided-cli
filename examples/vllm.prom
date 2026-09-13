@@ -1,0 +1,40 @@
+# HELP vllm:gpu_cache_usage_perc Gauge of GPU KV cache usage
+# TYPE vllm:gpu_cache_usage_perc gauge
+vllm:gpu_cache_usage_perc{model_name="x"} 0.86
+# HELP vllm:num_requests_running Requests currently running
+# TYPE vllm:num_requests_running gauge
+vllm:num_requests_running{model_name="x"} 34
+# HELP vllm:num_requests_waiting Requests waiting in queue
+# TYPE vllm:num_requests_waiting gauge
+vllm:num_requests_waiting{model_name="x"} 6
+# HELP vllm:num_preemptions_total Cumulative scheduler preemptions
+# TYPE vllm:num_preemptions_total counter
+vllm:num_preemptions_total{model_name="x"} 9
+# HELP vllm:request_success_total Successfully finished requests
+# TYPE vllm:request_success_total counter
+vllm:request_success_total{model_name="x",finished_reason="stop"} 210
+vllm:request_success_total{model_name="x",finished_reason="length"} 90
+# HELP vllm:prompt_tokens_total Prefill tokens processed
+# TYPE vllm:prompt_tokens_total counter
+vllm:prompt_tokens_total{model_name="x"} 420000
+# HELP vllm:generation_tokens_total Decode tokens generated
+# TYPE vllm:generation_tokens_total counter
+vllm:generation_tokens_total{model_name="x"} 980000
+# HELP vllm:time_to_first_token_seconds TTFT histogram
+# TYPE vllm:time_to_first_token_seconds histogram
+vllm:time_to_first_token_seconds_bucket{le="0.01"} 0
+vllm:time_to_first_token_seconds_bucket{le="0.05"} 50
+vllm:time_to_first_token_seconds_bucket{le="0.10"} 200
+vllm:time_to_first_token_seconds_bucket{le="0.50"} 300
+vllm:time_to_first_token_seconds_bucket{le="+Inf"} 300
+vllm:time_to_first_token_seconds_count 300
+vllm:time_to_first_token_seconds_sum 18.5
+# HELP vllm:time_per_output_token_seconds TPOT histogram
+# TYPE vllm:time_per_output_token_seconds histogram
+vllm:time_per_output_token_seconds_bucket{le="0.005"} 0
+vllm:time_per_output_token_seconds_bucket{le="0.010"} 60
+vllm:time_per_output_token_seconds_bucket{le="0.025"} 250
+vllm:time_per_output_token_seconds_bucket{le="0.050"} 300
+vllm:time_per_output_token_seconds_bucket{le="+Inf"} 300
+vllm:time_per_output_token_seconds_count 300
+vllm:time_per_output_token_seconds_sum 5.4

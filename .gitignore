@@ -1,0 +1,33 @@
+# Minimal Python
+# Virtual environments
+.venv/
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+
+# Packaging / build artifacts
+build/
+dist/
+*.egg-info/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+
+# Coverage artifacts
+.coverage
+.coverage.*
+htmlcov/
+
+# Local agent / editor state (never commit)
+.claude/
+
+# Env files / secrets
+.env
+.env.*
+
+# Validation output — regenerated, never committed
+*_validation_results.json
+# Capture artifacts (replay dirs, nsys reports, tarballs). Large and re-derivable.
+captures/

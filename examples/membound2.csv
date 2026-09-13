@@ -1,0 +1,7 @@
+"Kernel Name","Metric Name","Metric Value"
+"flash_attn_decode_kernel","sm__warps_active.avg.pct_of_peak_sustained_active","5.0"
+"flash_attn_decode_kernel","dram__bytes.sum","2000000000"
+"flash_attn_decode_kernel","gpu__time_duration.sum","1000000"
+"gemv_decode_kernel","sm__warps_active.avg.pct_of_peak_sustained_active","6.0"
+"gemv_decode_kernel","dram__bytes.sum","1980000000"
+"gemv_decode_kernel","gpu__time_duration.sum","1000000"
